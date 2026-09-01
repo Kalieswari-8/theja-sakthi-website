@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Theja Sakthi Solar Energy
+    </title>
+
+    <style>
+
+        /* =========================
+           BASIC
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #18352a;
+            background: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            height: 75px;
+            padding: 10px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: white;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+
+            box-shadow:
+                0 2px 15px rgba(0,0,0,0.08);
+        }
+
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .logo-area img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+
+        .logo-area h2 {
+            font-size: 17px;
+            color: #18352a;
+        }
+
+
+        .logo-area p {
+            color: #159447;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+
+        nav a {
+            color: #18352a;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+
+        nav a:hover {
+            color: #159447;
+        }
+
+
+        .menu-btn {
+            display: none;
+
+            border: none;
+            background: none;
+
+            font-size: 26px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HOME
+        ========================== */
+
+        .hero {
+            min-height: 650px;
+
+            padding: 80px 7%;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f2faf5,
+                    white
+                );
+        }
+
+
+        .small-title {
+            color: #159447;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(40px, 5vw, 65px);
+
+            line-height: 1.1;
+
+            margin: 18px 0;
+        }
+
+
+        .hero h1 span {
+            color: #159447;
+        }
+
+
+        .hero-content > p {
+            color: #68776f;
+
+            max-width: 520px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .button {
+            display: inline-block;
+
+            background: #087a43;
+
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+        }
+
+
+        .button:hover {
+            background: #065d33;
+        }
+
+
+        /* =========================
+           SOLAR IMAGE
+        ========================== */
+
+        .hero-image {
+            height: 420px;
+
+            background:
+                linear-gradient(
+                    #d9f3e2,
+                    #8ed19e
+                );
+
+            border-radius: 25px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .sun {
+            position: absolute;
+
+            right: 55px;
+            top: 45px;
+
+            font-size: 70px;
+
+            color: #ffc928;
+        }
+
+
+        .house {
+            position: absolute;
+
+            left: 15%;
+            right: 10%;
+            bottom: 50px;
+
+            height: 240px;
+        }
+
+
+        .roof {
+            width: 90%;
+            height: 110px;
+
+            background: #263d36;
+
+            transform: skew(-20deg);
+
+            position: absolute;
+
+            top: 0;
+        }
+
+
+        .solar-panel {
+            position: absolute;
+
+            top: 25px;
+            left: 15%;
+
+            width: 55%;
+            height: 75px;
+
+            background: #17779b;
+
+            transform: skew(-20deg);
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+        }
+
+
+        .solar-panel div {
+            border: 1px solid white;
+        }
+
+
+        .building {
+            position: absolute;
+
+            left: 25%;
+            bottom: 0;
+
+            width: 50%;
+            height: 140px;
+
+            background: white;
+        }
+
+
+        .window {
+            width: 55px;
+            height: 50px;
+
+            background: #9bdce5;
+
+            position: absolute;
+
+            left: 20%;
+            top: 25px;
+        }
+
+
+        .door {
+            width: 45px;
+            height: 80px;
+
+            background: #80b392;
+
+            position: absolute;
+
+            right: 20%;
+            bottom: 0;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================== */
+
+        .section {
+            padding: 90px 7%;
+        }
+
+
+        .light {
+            background: #f3f8f5;
+        }
+
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .section-title > p {
+            color: #159447;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-title h2 {
+            font-size: 40px;
+
+            margin-top: 8px;
+        }
+
+
+        .description {
+            color: #68776f;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-content {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 60px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .about-box {
+            background: #0a3021;
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+        }
+
+
+        .about-box h3 {
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .about-box p {
+            color: #c7d9d0;
+
+            margin-top: 12px;
+        }
+
+
+        .about-points {
+            display: grid;
+
+            gap: 20px;
+        }
+
+
+        .about-points div {
+            padding: 20px;
+
+            border-left:
+                4px solid #159447;
+
+            background: #f5f9f6;
+        }
+
+
+        .about-points b {
+            color: #087a43;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 14px;
+
+            border:
+                1px solid #e0e9e3;
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.08);
+        }
+
+
+        .icon {
+            font-size: 35px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+            color: #68776f;
+        }
+
+
+        /* =========================
+           FOUNDER
+        ========================== */
+
+        .founder {
+            padding: 90px 7%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f3f8f5,
+                    #ffffff
+                );
+        }
+
+
+        .founder-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 55px 40px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            border:
+                1px solid #dfe9e3;
+
+            box-shadow:
+                0 18px 45px
+                rgba(8,37,26,0.08);
+        }
+
+
+        .founder-label {
+            color: #159447;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .founder-content h2 {
+            font-size: 38px;
+
+            color: #082c1e;
+
+            margin-bottom: 4px;
+        }
+
+
+        .founder-content h3 {
+            color: #159447;
+
+            font-size: 16px;
+
+            font-weight: 600;
+        }
+
+
+        .company-name {
+            color: #68776f;
+
+            font-size: 14px;
+
+            margin-top: 4px;
+        }
+
+
+        .founder-description {
+            max-width: 600px;
+
+            margin: 20px auto 28px;
+
+            color: #68776f;
+
+            font-size: 14px;
+        }
+
+
+        .founder-button {
+            display: inline-block;
+
+            background: #087a43;
+
+            color: white;
+
+            padding: 14px 26px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .founder-button:hover {
+            background: #065d33;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .project-placeholder {
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 70px 20px;
+
+            text-align: center;
+
+            border:
+                2px dashed #b7d5c1;
+
+            border-radius: 15px;
+        }
+
+
+        .project-placeholder span {
+            font-size: 50px;
+        }
+
+
+        .project-placeholder h3 {
+            margin: 10px;
+        }
+
+
+        /* =========================
+           WHY CHOOSE US
+        ========================== */
+
+        .why {
+            background: #082c1e;
+
+            color: white;
+
+            padding: 90px 7%;
+        }
+
+
+        .why .section-title h2 {
+            color: white;
+        }
+
+
+        .why-grid {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .why-grid div {
+            padding: 30px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            border-radius: 12px;
+        }
+
+
+        .why-grid span {
+            color: #58ca78;
+
+            font-weight: bold;
+        }
+
+
+        .why-grid h3 {
+            margin: 10px 0;
+        }
+
+
+        .why-grid p {
+            color: #b8c9c1;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .contact-box div {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #f3f8f5;
+
+            border-radius: 12px;
+        }
+
+
+        .contact-box h3 {
+            color: #087a43;
+
+            font-size: 16px;
+        }
+
+
+        .contact-box p {
+            font-size: 14px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #061c13;
+
+            color: #b9c9c1;
+
+            text-align: center;
+
+            padding: 35px 7%;
+        }
+
+
+        .footer-logo {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: white;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-logo img {
+            width: 45px;
+            height: 45px;
+        }
+
+
+        .footer-logo h3 {
+            color: white;
+        }
+
+
+        .footer-logo p {
+            color: #50bd70;
+
+            font-size: 8px;
+
+            letter-spacing: 2px;
+        }
+
+
+        .copyright {
+            margin-top: 20px;
+
+            font-size: 11px;
+
+            color: #71867c;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 10px 5%;
+            }
+
+
+            nav {
+                display: none;
+
+                position: absolute;
+
+                top: 75px;
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                padding: 20px;
+
+                text-align: center;
+
+                gap: 18px;
+            }
+
+
+            nav.show {
+                display: flex;
+            }
+
+
+            .menu-btn {
+                display: block;
+            }
+
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 60px 5%;
+            }
+
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+
+            .hero-image {
+                height: 330px;
+            }
+
+
+            .section {
+                padding: 65px 5%;
+            }
+
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+
+            .about-content,
+            .cards,
+            .why-grid,
+            .contact-box {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-box {
+                padding: 30px;
+            }
+
+
+            .logo-area h2 {
+                font-size: 14px;
+            }
+
+
+            .logo-area p {
+                font-size: 7px;
+            }
+
+
+            .founder {
+                padding: 65px 5%;
+            }
+
+
+            .founder-container {
+                padding: 35px 20px;
+            }
+
+
+            .founder-content h2 {
+                font-size: 30px;
+            }
+
+
+            .founder-button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <img
+                src="logo.png"
+                alt="Theja Sakthi Solar Energy Logo"
+            >
+
+            <div>
+
+                <h2>
+                    THEJA SAKTHI
+                </h2>
+
+                <p>
+                    SOLAR ENERGY
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav id="navbar">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#founder">
+                Founder
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                CLEAN • SMART • SUSTAINABLE
+            </p>
+
+
+            <h1>
+
+                Powering a
+
+                <span>
+                    Brighter Future
+                </span>
+
+                with Solar Energy
+
+            </h1>
+
+
+            <p>
+
+                Reliable and sustainable solar
+                energy solutions for a cleaner
+                and greener tomorrow.
+
+            </p>
+
+
+            <a
+                href="#contact"
+                class="button"
+            >
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="sun">
+                ☀
+            </div>
+
+
+            <div class="house">
+
+                <div class="roof"></div>
+
+
+                <div class="solar-panel">
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                </div>
+
+
+                <div class="building">
+
+                    <div class="window"></div>
+
+                    <div class="door"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+        id="about"
+        class="section"
+    >
+
+        <div class="section-title">
+
+            <p>
+                ABOUT US
+            </p>
+
+            <h2>
+                Clean Energy for a Better Future
+            </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+
+            <div class="about-box">
+
+                <h3>
+                    Theja Sakthi Solar Energy
+                </h3>
+
+
+                <p>
+                    We believe solar energy can
+                    create a cleaner, smarter and
+                    more sustainable future.
+                </p>
+
+
+                <p>
+                    Our aim is to provide reliable
+                    solar energy solutions according
+                    to the needs of our customers.
+                </p>
+
+            </div>
+
+
+            <div class="about-points">
+
+
+                <div>
+
+                    <b>
+                        ☀ Clean Energy
+                    </b>
+
+                    <p>
+                        Environment-friendly
+                        renewable energy.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <b>
+                        ⚡ Smart Solutions
+                    </b>
+
+                    <p>
+                        Efficient solutions designed
+                        for your needs.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <b>
+                        🌱 Sustainable Future
+                    </b>
+
+                    <p>
+                        Building a greener tomorrow
+                        through solar power.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section
+        id="services"
+        class="section light"
+    >
+
+        <div class="section-title">
+
+            <p>
+                OUR SERVICES
+            </p>
+
+            <h2>
+                Solar Energy Solutions
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🏠
+                </div>
+
+                <h3>
+                    Residential Solar
+                </h3>
+
+                <p>
+                    Solar energy solutions for
+                    homes and residential buildings.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🏢
+                </div>
+
+                <h3>
+                    Commercial Solar
+                </h3>
+
+                <p>
+                    Solar power solutions for shops,
+                    offices and businesses.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Solar Solutions
+                </h3>
+
+                <p>
+                    Reliable and efficient
+                    solar energy systems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOUNDER
+    ========================== -->
+
+    <section
+        id="founder"
+        class="founder"
+    >
+
+        <div class="founder-container">
+
+            <div class="founder-content">
+
+                <p class="founder-label">
+                    MEET OUR FOUNDER
+                </p>
+
+
+                <h2>
+                    Mr. Manikandan M
+                </h2>
+
+
+                <h3>
+                    Founder & Visionary
+                </h3>
+
+
+                <p class="company-name">
+                    Theja Sakthi Solar Energy
+                </p>
+
+
+                <p class="founder-description">
+
+                    Committed to building a cleaner
+                    and more sustainable future through
+                    reliable, innovative and efficient
+                    solar energy solutions.
+
+                </p>
+
+
+                <a
+                    href="tel:+919489003730"
+                    class="founder-button"
+                >
+
+                    ☎ Dial to Reach Founder
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section
+        id="projects"
+        class="section"
+    >
+
+        <div class="section-title">
+
+            <p>
+                OUR PROJECTS
+            </p>
+
+            <h2>
+                Projects Coming Soon
+            </h2>
+
+
+            <p class="description">
+
+                Our completed solar projects
+                will be showcased here soon.
+
+            </p>
+
+        </div>
+
+
+        <div class="project-placeholder">
+
+            <span>
+                ☀
+            </span>
+
+
+            <h3>
+                Solar Projects
+            </h3>
+
+
+            <p>
+                Project images and details
+                will be added soon.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section class="why">
+
+        <div class="section-title">
+
+            <p>
+                WHY CHOOSE US
+            </p>
+
+            <h2>
+                Why Theja Sakthi?
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div>
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    We focus on reliable
+                    solar energy solutions.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Professional
+                </h3>
+
+                <p>
+                    We aim to provide
+                    professional service.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Sustainable
+                </h3>
+
+                <p>
+                    We support a cleaner
+                    and greener future.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+        id="contact"
+        class="section"
+    >
+
+        <div class="section-title">
+
+            <p>
+                CONTACT US
+            </p>
+
+            <h2>
+                Let's Go Solar
+            </h2>
+
+
+            <p class="description">
+
+                Get in touch with
+                Theja Sakthi Solar Energy.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+
+            <div>
+
+                <h3>
+                    📞 Founder
+                </h3>
+
+                <p>
+                    +91 9489003730
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    👤 Founder
+                </h3>
+
+                <p>
+                    Mr. Manikandan M
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    ☀ Company
+                </h3>
+
+                <p>
+                    Theja Sakthi Solar Energy
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            <img
+                src="logo.png"
+                alt="Theja Sakthi Logo"
+            >
+
+
+            <div>
+
+                <h3>
+                    THEJA SAKTHI
+                </h3>
+
+                <p>
+                    SOLAR ENERGY
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p>
+            Clean Energy.
+            Smart Solutions.
+            Brighter Future.
+        </p>
+
+
+        <p class="copyright">
+
+            © 2026 Theja Sakthi Solar Energy.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const navbar =
+                document.getElementById("navbar");
+
+            navbar.classList.toggle("show");
+
+        }
+
+
+        const links =
+            document.querySelectorAll("#navbar a");
+
+
+        links.forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    document
+                        .getElementById("navbar")
+                        .classList
+                        .remove("show");
+
+                }
+            );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
