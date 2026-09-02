@@ -309,7 +309,7 @@
 
                         <div class="service-icon">🏠</div>
 
-                        <h3>Residential Solar</h3>
+                        <h3> Solar</h3>
 
                         <p>
                             Solar energy solutions for homes
@@ -329,7 +329,7 @@
 
                         <div class="service-icon">🏢</div>
 
-                        <h3>Commercial Solar</h3>
+                        <h3>On Grid</h3>
 
                         <p>
                             Solar solutions designed to support
@@ -349,7 +349,7 @@
 
                         <div class="service-icon">⚡</div>
 
-                        <h3>Solar Solutions</h3>
+                        <h3>Off Grid</h3>
 
                         <p>
                             Smart and sustainable solar solutions
@@ -361,6 +361,79 @@
                         </a>
 
                     </article>
+                    <article class="service-card">
+
+    <div class="service-number">04</div>
+
+    <div class="service-icon">💡</div>
+
+    <h3>Street Light</h3>
+
+    <p>
+        Reliable solar street light solutions
+        for different requirements.
+    </p>
+
+    <a href="#contact">
+        Enquire Now →
+    </a>
+
+</article>
+<article class="service-card">
+
+    <div class="service-number">05</div>
+
+    <div class="service-icon">💧</div>
+
+    <h3>Water Pump</h3>
+
+    <p>
+        Solar powered water pump solutions
+        for efficient water requirements.
+    </p>
+
+    <a href="#contact">
+        Enquire Now →
+    </a>
+
+</article>
+<article class="service-card">
+
+    <div class="service-number">06</div>
+
+    <div class="service-icon">🔄</div>
+
+    <h3>Hybrid</h3>
+
+    <p>
+        Flexible hybrid solar energy solutions
+        for reliable and efficient power.
+    </p>
+
+    <a href="#contact">
+        Enquire Now →
+    </a>
+
+</article>
+<article class="service-card">
+
+    <div class="service-number">07</div>
+
+    <div class="service-icon">📋</div>
+
+    <h3>Subsidiary Orders</h3>
+
+    <p>
+        Solar related subsidiary order solutions
+        based on customer requirements.
+    </p>
+
+    <a href="#contact">
+        Enquire Now →
+    </a>
+
+</article>
+
 
                 </div>
 
@@ -742,6 +815,34 @@
                         </div>
 
                     </div>
+                    <div class="contact-card">
+
+    <span class="contact-icon">✉</span>
+
+    <div>
+        <small>EMAIL</small>
+
+        <a href="mailto:thejasakthisolar@gmail.com">
+            thejasakthisolar@gmail.com
+        </a>
+    </div>
+
+</div>
+<div class="contact-card">
+
+    <span class="contact-icon">▶</span>
+
+    <div>
+        <small>YOUTUBE</small>
+
+        <a href="https://youtube.com/@sathyamanikandan-w5u?si=JlaTZmRIptmSnbdw"
+           target="_blank"
+           rel="noopener">
+            Manikandan
+        </a>
+    </div>
+
+</div>
 
 
                     <div class="contact-box">
@@ -776,58 +877,92 @@
                 </div>
 
             </div>
-            <!-- CUSTOMER ENQUIRY FORM -->
+
+        <!-- CUSTOMER ENQUIRY FORM -->
 <div class="customer-enquiry">
-
-    <h2>Customer Enquiry</h2>
-
-    <p>Tell us about your solar requirement</p>
+    <div class="enquiry-heading">
+        <span>CUSTOMER ENQUIRY</span>
+        <h2>Tell Us Your <strong>Solar Requirement</strong></h2>
+        <p>Share your requirements with us. Our team will contact you shortly.</p>
+    </div>
 
     <form class="enquiry-form" id="enquiryForm">
 
-        <input type="text"
-               id="customerName"
-               placeholder="Your Name"
-               required>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="customerName">Full Name</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
 
-        <input type="tel"
-               id="customerPhone"
-               placeholder="Mobile Number"
-               required>
+            <div class="form-group">
+                <label for="customerPhone">Mobile Number</label>
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    name="customerPhone"
+                    placeholder="Enter mobile number"
+                    required
+                >
+            </div>
+        </div>
 
-        <input type="text"
-               id="customerLocation"
-               placeholder="Location"
-               required>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="customerLocation">Location</label>
+                <input
+                    type="text"
+                    id="customerLocation"
+                    name="customerLocation"
+                    placeholder="City / Area"
+                    required
+                >
+            </div>
 
-        <select id="solarCapacity" required>
-            <option value="">Select Solar Capacity</option>
-            <option value="1KW">1 KW</option>
-            <option value="3KW">3 KW</option>
-            <option value="5KW">5 KW</option>
-            <option value="10KW">10 KW</option>
-            <option value="Other">Other</option>
-        </select>
+            <div class="form-group">
+                <label for="solarCapacity">Required Solar Capacity</label>
+                <select id="solarCapacity" name="solarCapacity" required>
+                    <option value="">Select Capacity</option>
+                    <option value="1KW">1 KW</option>
+                    <option value="3KW">3 KW</option>
+                    <option value="5KW">5 KW</option>
+                    <option value="10KW">10 KW</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
 
-        <select id="propertyType" required>
-            <option value="">Property Type</option>
-            <option value="Home">Home</option>
-            <option value="Commercial">Commercial</option>
-        </select>
+        <div class="form-group">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType" name="propertyType" required>
+                <option value="">Select Property Type</option>
+                <option value="Home">Residential / Home</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+        </div>
 
-        <textarea id="customerMessage"
-                  placeholder="Your Requirement"
-                  rows="5"
-                  required></textarea>
+        <div class="form-group">
+            <label for="customerMessage">Your Requirement</label>
+            <textarea
+                id="customerMessage"
+                name="customerMessage"
+                rows="5"
+                placeholder="Tell us about your solar requirement..."
+            ></textarea>
+        </div>
 
-        <button type="submit">Submit Enquiry</button>
+        <button type="submit" class="enquiry-button">
+            Submit Enquiry
+        </button>
 
     </form>
-
 </div>
-
-        </section>
-
+</section>
     </main>
 
 
