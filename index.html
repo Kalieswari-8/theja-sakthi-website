@@ -776,6 +776,55 @@
                 </div>
 
             </div>
+            <!-- CUSTOMER ENQUIRY FORM -->
+<div class="customer-enquiry">
+
+    <h2>Customer Enquiry</h2>
+
+    <p>Tell us about your solar requirement</p>
+
+    <form class="enquiry-form" id="enquiryForm">
+
+        <input type="text"
+               id="customerName"
+               placeholder="Your Name"
+               required>
+
+        <input type="tel"
+               id="customerPhone"
+               placeholder="Mobile Number"
+               required>
+
+        <input type="text"
+               id="customerLocation"
+               placeholder="Location"
+               required>
+
+        <select id="solarCapacity" required>
+            <option value="">Select Solar Capacity</option>
+            <option value="1KW">1 KW</option>
+            <option value="3KW">3 KW</option>
+            <option value="5KW">5 KW</option>
+            <option value="10KW">10 KW</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <select id="propertyType" required>
+            <option value="">Property Type</option>
+            <option value="Home">Home</option>
+            <option value="Commercial">Commercial</option>
+        </select>
+
+        <textarea id="customerMessage"
+                  placeholder="Your Requirement"
+                  rows="5"
+                  required></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+    </form>
+
+</div>
 
         </section>
 
