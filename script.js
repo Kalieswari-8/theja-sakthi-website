@@ -178,7 +178,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
     data.append("propertyType", document.getElementById("propertyType").value);
     data.append("customerMessage", document.getElementById("customerMessage").value);
 
-    fetch("https://script.google.com/macros/s/AKfycbz1tXlEi61JH0TImTKPuTJDPL0lrhLkexSNXLefaE0wnbZZe8aMnAVaBrCWH3ySN0bd/exec", {
+   fetch("https://script.google.com/a/macros/srcw.ac.in/s/AKfycbzL_y0pXxek5KSobdZhCpeiHAQP1BxtlWnggBw538p2ffTGiFLIbtngDLUPV4rYflgn/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
