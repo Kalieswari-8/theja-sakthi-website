@@ -164,3 +164,30 @@ window.addEventListener("load", () => {
     );
 
 });
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = this;
+
+    const data = new URLSearchParams();
+
+    data.append("customerName", document.getElementById("customerName").value);
+    data.append("customerPhone", document.getElementById("customerPhone").value);
+    data.append("customerLocation", document.getElementById("customerLocation").value);
+    data.append("solarCapacity", document.getElementById("solarCapacity").value);
+    data.append("propertyType", document.getElementById("propertyType").value);
+    data.append("customerMessage", document.getElementById("customerMessage").value);
+
+    fetch("https://script.google.com/macros/s/AKfycbz1tXlEi61JH0TImTKPuTJDPL0lrhLkexSNXLefaE0wnbZZe8aMnAVaBrCWH3ySN0bd/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: data.toString()
+    });
+
+    alert("Thank you! Your enquiry has been submitted successfully.");
+
+    form.reset();
+});
